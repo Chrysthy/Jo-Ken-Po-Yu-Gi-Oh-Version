@@ -48,3 +48,13 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.score_box {
+    background-color: #fff;
+    padding: 30px;
+}
+
+.frame {
+    border: 3px solid #000;
+    border-radius: 5px;
+}
