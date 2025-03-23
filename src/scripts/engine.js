@@ -25,6 +25,11 @@ const state = {
 
 }
 
+const playerSides = {
+    player1: "player-field-card",
+    computer: "computer-field-card",
+}
+
 const pathImages = './src/assets/icons/';
 
 //enumerando, dando sentido para as cartas
@@ -59,8 +64,24 @@ const cardData = [
 
 ];
 
+
+async function drawCards(cardNumbers, fieldSide) {
+
+    for (let i = 0; i < cardNumbers; i++) {
+
+        const randonIdCard = await getRandomCardId();
+
+        const cardImage = await createCardImage(randonIdCard, fieldSide);
+    }
+
+}
+
+
+
 function init() {
 
+    drawCards(5, playerSides.player1);
+    drawCards(5, playerSides.computer);
 }
 
 init();
