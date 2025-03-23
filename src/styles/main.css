@@ -49,6 +49,10 @@
     align-items: center;
 }
 
+.container__right {
+    width: 65%;
+}
+
 .score_box {
     background-color: #fff;
     padding: 30px;
@@ -78,4 +82,14 @@
 
 .card-type {
     font-size: 1rem;
+}
+
+.card-box__container {
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0.3rem;
 }
