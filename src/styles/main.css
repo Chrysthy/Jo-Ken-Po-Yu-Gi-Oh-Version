@@ -112,3 +112,17 @@
 .versus-bottom {
     margin-top: 1rem;
 }
+
+#next-duel {
+    display: none;
+}
+
+.card-box {
+    height: 9rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
