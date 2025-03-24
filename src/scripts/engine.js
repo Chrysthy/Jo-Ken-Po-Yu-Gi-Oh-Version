@@ -117,6 +117,9 @@ async function setCardsField(cardId) {
 
     let duelResult = await checkDuelResult(cardId, computerCardId);
 
+    await updateScore();
+    await drawButton(duelResult);
+
 }
 
 
