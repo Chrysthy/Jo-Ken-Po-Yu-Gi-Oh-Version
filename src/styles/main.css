@@ -135,3 +135,12 @@
 
     border-radius: 8px;
 }
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
