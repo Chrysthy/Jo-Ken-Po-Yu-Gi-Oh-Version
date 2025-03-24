@@ -74,13 +74,13 @@ async function getRandomCardId() {
 }
 
 
-async function createCardImage(randonIdCard, fieldSide) {
+async function createCardImage(randomIdCard, fieldSide) {
 
     const cardImage = document.createElement('img');
 
     cardImage.setAttribute('height', '100px');
     cardImage.setAttribute('src', '.src/assets/icons/card-back.png');
-    cardImage.setAttribute('data-id', randonIdCard);
+    cardImage.setAttribute('data-id', randomIdCard);
     cardImage.classList.add('card');
 
 
@@ -92,18 +92,22 @@ async function createCardImage(randonIdCard, fieldSide) {
         })
     }
 
+    cardImage.addEventListener('mouseover', () => {
+
+        drawSelectCard(randomIdCard);
+
+    })
 
 }
-
 
 
 async function drawCards(cardNumbers, fieldSide) {
 
     for (let i = 0; i < cardNumbers; i++) {
 
-        const randonIdCard = await getRandomCardId();
+        const randomIdCard = await getRandomCardId();
 
-        const cardImage = await createCardImage(randonIdCard, fieldSide);
+        const cardImage = await createCardImage(randomIdCard, fieldSide);
 
         document.getElementById(fieldSide).appendChild(cardImage);
     }
