@@ -26,8 +26,8 @@ const state = {
 }
 
 const playerSides = {
-    player1: "player-field-card",
-    computer: "computer-field-card",
+    player1: "player-cards",
+    computer: "computer-cards",
 }
 
 const pathImages = './src/assets/icons/';
@@ -79,7 +79,7 @@ async function createCardImage(IdCard, fieldSide) {
     const cardImage = document.createElement('img');
 
     cardImage.setAttribute('height', '100px');
-    cardImage.setAttribute('src', '.src/assets/icons/card-back.png');
+    cardImage.setAttribute('src', './src/assets/icons/card-back.png');
     cardImage.setAttribute('data-id', IdCard);
     cardImage.classList.add('card');
 
