@@ -74,13 +74,13 @@ async function getRandomCardId() {
 }
 
 
-async function createCardImage(randomIdCard, fieldSide) {
+async function createCardImage(IdCard, fieldSide) {
 
     const cardImage = document.createElement('img');
 
     cardImage.setAttribute('height', '100px');
     cardImage.setAttribute('src', '.src/assets/icons/card-back.png');
-    cardImage.setAttribute('data-id', randomIdCard);
+    cardImage.setAttribute('data-id', IdCard);
     cardImage.classList.add('card');
 
 
@@ -94,9 +94,11 @@ async function createCardImage(randomIdCard, fieldSide) {
 
     cardImage.addEventListener('mouseover', () => {
 
-        drawSelectCard(randomIdCard);
+        drawSelectCard(IdCard);
 
     })
+
+    return cardImage;
 
 }
 
