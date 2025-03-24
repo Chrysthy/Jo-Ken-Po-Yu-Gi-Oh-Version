@@ -131,6 +131,28 @@ async function setCardsField(cardId) {
 }
 
 
+async function checkDuelResult(playerCardId, computerCardId) {
+
+    let duelResults = 'tie';
+    let playerCard = cardData[playerCardId];
+
+    if (playerCard.WinOf.includes(computerCardId)) {
+
+        duelResults = 'Win';
+        state.score.playerScore++;
+    }
+
+    if (playerCard.LoseOf.includes(computerCardId)) {
+
+        duelResults = 'Lose';
+        state.score.computerScore++;
+    }
+
+    return duelResults;
+}
+
+
+
 async function removeAllCardsImages() {
 
     //remove cartas do computer
