@@ -21,13 +21,20 @@ const state = {
 
     playerSides: {
         player1: "player-cards",
+        player1BOX: document.querySelector('#player-cards'),
         computer: "computer-cards",
+        computerBOX: document.querySelector('#computer-cards'),
     },
 
     actions: {
         button: document.getElementById('next-duel'),
     },
 
+}
+
+const playerSides = {
+    player1: 'player-cards',
+    computer: 'computer-cards',
 }
 
 
@@ -57,7 +64,7 @@ const cardData = [
     {
         id: 2,
         name: "Exodia",
-        type: "Sicssors",
+        type: "Scissors",
         img: `${pathImages}/exodia.png`,
         WinOf: [0],
         LoseOf: [1],
@@ -124,18 +131,17 @@ async function setCardsField(cardId) {
 }
 
 
-async function removeAllCardsImages(index) {
+async function removeAllCardsImages() {
 
     //remove cartas do computer
-    let cards = document.querySelector('#computer-cards');
-    let imgElements = cards.querySelectorAll('img');
+    let { computerBOX, player1BOX } = state.playerSides;
+    let imgElements = computerBOX.querySelectorAll('img');
 
     imgElements.forEach((img) => img.remove());
 
 
     //remove cartas do player
-    cards = document.querySelector('#player-cards');
-    imgElements = cards.querySelectorAll('img');
+    imgElements = player1BOX.querySelectorAll('img');
 
     imgElements.forEach((img) => img.remove());
 
