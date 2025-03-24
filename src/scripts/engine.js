@@ -72,6 +72,8 @@ async function drawCards(cardNumbers, fieldSide) {
         const randonIdCard = await getRandomCardId();
 
         const cardImage = await createCardImage(randonIdCard, fieldSide);
+
+        document.getElementById(fieldSide).appendChild(cardImage);
     }
 
 }
