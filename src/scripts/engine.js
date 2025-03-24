@@ -70,7 +70,29 @@ async function getRandomCardId() {
     const randomIndex = Math.floor(Math.random() * cardData.length);
 
     return cardData[randomIndex].id;
-    
+
+}
+
+
+async function createCardImage(randonIdCard, fieldSide) {
+
+    const cardImage = document.createElement('img');
+
+    cardImage.setAttribute('height', '100px');
+    cardImage.setAttribute('src', '.src/assets/icons/card-back.png');
+    cardImage.setAttribute('data-id', randonIdCard);
+    cardImage.classList.add('card');
+
+
+    if (fieldSide === playerSides.player1) {
+
+        cardImage.addEventListener('click', () => {
+
+            setCardsField(cardImage.getAttribute("data-id"));
+        })
+    }
+
+
 }
 
 
