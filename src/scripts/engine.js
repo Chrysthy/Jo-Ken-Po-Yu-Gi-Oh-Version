@@ -131,6 +131,19 @@ async function setCardsField(cardId) {
 }
 
 
+async function drawButton(text) {
+
+    state.actions.button.innerText = text;
+    state.actions.button.style.display = 'block';
+
+}
+
+
+
+
+
+
+
 async function checkDuelResult(playerCardId, computerCardId) {
 
     let duelResults = 'tie';
