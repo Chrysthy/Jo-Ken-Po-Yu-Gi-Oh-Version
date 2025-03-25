@@ -269,7 +269,7 @@ async function resetDuel() {
 
 async function playAudio(status) {
 
-    const audio = new Audio(`../assets/audios/${status}.wav`);
+    const audio = new Audio(`./src/assets/audios/${status}.mp3`);
     audio.volume = 0.2;
     audio.play();
 }
