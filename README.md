@@ -11,3 +11,15 @@
   <a href="#support">Support</a>  
 </p>
 
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=c920c9&labelColor=000000">
+</p>
+
+<br>
+
+## 📸 Screenshots
+
+<img src=".github/game.gif" alt="gif do projeto">
+
+<br>
+
