@@ -123,6 +123,8 @@ async function setCardsField(cardId) {
     state.fieldCards.player.style.display = 'block';
     state.fieldCards.computer.style.display = 'block';
 
+    await hiddenCardDetails();
+
     state.fieldCards.player.src = cardData[cardId].img;
     state.fieldCards.computer.src = cardData[computerCardId].img;
 
@@ -132,6 +134,16 @@ async function setCardsField(cardId) {
     await drawButton(duelResult);
 
 }
+
+
+async function hiddenCardDetails() {
+
+    state.cardsSprites.avatar.src = '';
+    state.cardsSprites.name.innerText = '';
+    state.cardsSprites.type.innerText = '';
+}
+
+
 
 
 async function drawButton(text) {
