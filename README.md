@@ -1,5 +1,4 @@
-<h2 align="center"> 🚧 Work in progress 🚧 </h2>
-<p align="center">This project is still under development. </p>
+<h1 align="center"> Memory Game 🧠</h1> 
 
-<br>
-<br>
+<p align="center">A classic Jokenpo challenge! Choose your move and try to beat your opponent. Have fun!</p>
+
