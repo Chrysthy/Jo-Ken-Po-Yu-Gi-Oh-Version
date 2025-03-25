@@ -104,7 +104,7 @@
     padding-top: 0.1rem;
     height: 300px;
 
-  
+
 }
 
 .versus-top,
@@ -136,6 +136,7 @@
     height: 11.2rem;
     width: 8rem;
 
+    border: 1px solid #fff;
     border-radius: 8px;
 }
 
