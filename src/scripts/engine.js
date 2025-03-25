@@ -50,6 +50,7 @@ const cardData = [
         img: `${pathImages}/dragon.png`,
         WinOf: [1],
         LoseOf: [2],
+        TieOf: [0],
     },
 
     {
@@ -59,6 +60,7 @@ const cardData = [
         img: `${pathImages}/magician.png`,
         WinOf: [2],
         LoseOf: [0],
+        TieOf: [1],
     },
 
     {
@@ -68,6 +70,7 @@ const cardData = [
         img: `${pathImages}/exodia.png`,
         WinOf: [0],
         LoseOf: [1],
+        TieOf: [2],
     },
 
 ];
@@ -150,19 +153,33 @@ async function updateScore() {
 
 async function checkDuelResult(playerCardId, computerCardId) {
 
-    let duelResults = 'tie';
+    let duelResults = 'Tie';
     let playerCard = cardData[playerCardId];
 
     if (playerCard.WinOf.includes(computerCardId)) {
 
         duelResults = 'Win';
+
+        await playAudio(duelResults);
+
         state.score.playerScore++;
     }
 
     if (playerCard.LoseOf.includes(computerCardId)) {
 
         duelResults = 'Lose';
+
+        await playAudio(duelResults);
+
         state.score.computerScore++;
+    }
+
+    if (playerCard.TieOf.includes(computerCardId)) {
+        duelResults = 'Tie';
+
+        await playAudio(duelResults);
+
+        
     }
 
     return duelResults;
@@ -225,7 +242,12 @@ async function resetDuel() {
 
 
 
+async function playAudio(status) {
 
+    const audio = new Audio(`./src/assets/audios/${status}.wav`);
+
+    audio.play();
+}
 
 
 
