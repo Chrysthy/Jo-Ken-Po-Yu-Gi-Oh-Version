@@ -34,7 +34,7 @@
 
 ## 💻 Project
 
-- The project was created as a challenge from the Dio Bootcamp and also to practice HTML, CSS, and JavaScript.
+- The project was created as a challenge from the [Dio Bootcamp](https://web.dio.me/track/f31d0ec6-b46a-47d6-b5ec-5dcd3766dacb) and also to practice HTML, CSS, and JavaScript.
 
 <br>
 
