@@ -136,7 +136,7 @@ async function setCardsField(cardId) {
 
 async function drawButton(text) {
 
-    state.actions.button.innerText = text;
+    state.actions.button.innerText = text.toUpperCase();
     state.actions.button.style.display = 'block';
 
 }
@@ -160,27 +160,21 @@ async function checkDuelResult(playerCardId, computerCardId) {
 
         duelResults = 'Win';
 
-        await playAudio(duelResults);
-
         state.score.playerScore++;
     }
 
     if (playerCard.LoseOf.includes(computerCardId)) {
 
         duelResults = 'Lose';
-
-        await playAudio(duelResults);
-
+        
         state.score.computerScore++;
     }
 
     if (playerCard.TieOf.includes(computerCardId)) {
         duelResults = 'Tie';
-
-        await playAudio(duelResults);
-
-        
     }
+
+    await playAudio(duelResults);
 
     return duelResults;
 }
