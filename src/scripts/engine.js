@@ -212,6 +212,23 @@ async function drawCards(cardNumbers, fieldSide) {
 }
 
 
+async function resetDuel() {
+
+    state.cardsSprites.avatar.src = '';
+    state.actions.button.style.display = 'none';
+
+    state.fieldCards.player.style.display = 'none';
+    state.fieldCards.computer.style.display = 'none';
+
+    init();
+}
+
+
+
+
+
+
+
 
 function init() {
 
