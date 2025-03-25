@@ -34,7 +34,7 @@
 
 ## 💻 Project
 
-- The project was created to practice HTML, CSS and JavaScript.
+- The project was created as a challenge from the Dio Bootcamp and also to practice HTML, CSS, and JavaScript.
 
 <br>
 
