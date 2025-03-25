@@ -31,3 +31,9 @@
 - Git e GitHub
 
 <br>
+
+## 💻 Project
+
+- The project was created to practice HTML, CSS and JavaScript.
+
+<br>
