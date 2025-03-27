@@ -184,7 +184,7 @@ async function updateScore() {
 
 async function checkDuelResult(playerCardId, computerCardId) {
 
-    let duelResults = 'Tie';
+    let duelResults = 'tie';
     let playerCard = cardData[playerCardId];
 
     if (playerCard.WinOf.includes(computerCardId)) {
