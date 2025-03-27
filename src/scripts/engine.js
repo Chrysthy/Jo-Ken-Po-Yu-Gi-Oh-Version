@@ -189,20 +189,20 @@ async function checkDuelResult(playerCardId, computerCardId) {
 
     if (playerCard.WinOf.includes(computerCardId)) {
 
-        duelResults = 'Win';
+        duelResults = 'win';
 
         state.score.playerScore++;
     }
 
     if (playerCard.LoseOf.includes(computerCardId)) {
 
-        duelResults = 'Lose';
+        duelResults = 'lose';
 
         state.score.computerScore++;
     }
 
     if (playerCard.TieOf.includes(computerCardId)) {
-        duelResults = 'Tie';
+        duelResults = 'tie';
     }
 
     await playAudio(duelResults);
